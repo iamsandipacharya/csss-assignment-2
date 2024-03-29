@@ -1,0 +1,226 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetting default styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* General text styles */
+p,
+h1,
+h2,
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-weight: 400;
+    font-size: .9em;
+    line-height: 1.3em;
+    margin: 0;
+}
+
+a {
+    color: #0b0b0b;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/* Element styles */
+#container {
+    position: relative;
+    width: 800px;
+    margin: 45px auto;
+}
+
+/* Header styles */
+header h1 {
+    position: absolute;
+    left: -2px;
+    font-size: 4.5em;
+    top: 17px;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-family: "Anybody", sans-serif;
+}
+
+header h1 em {
+    color: rgb(254, 8, 8);
+}
+
+header img {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    width: 150px;
+}
+
+header p {
+    text-transform: uppercase;
+}
+
+/* Main content styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "sidebar article" "sidebar image" "footercontent article2";
+    border: 1px solid rgb(8, 8, 8);
+    padding-top: 125px;
+}
+
+/* Sidebar styles */
+main aside:first-of-type {
+    font-size: 16px;
+    line-height: 1.8em;
+    padding-right: 25px;
+    margin-left: 25px;
+    border-right: 1px solid;
+    font-weight: 300;
+}
+
+/* Article styles */
+main article:first-child {
+    margin-bottom: 10px;
+    grid-area: article;
+}
+
+main article:last-of-type {
+    grid-area: article2;
+}
+
+/* Image styles */
+main img {
+    width: 95%;
+    margin-left: 10px;
+    margin-top: -10px;
+    grid-area: image;
+    margin-top: 25%;
+}
+
+/* Footer content styles */
+main aside:last-child {
+    padding: 10px;
+    margin-top: -119px;
+    grid-area: footercontent;
+    background-color: #f8f3f3;
+}
+
+/* More specific article and image styles */
+main article,
+main img {
+    margin-top: 2%;
+    padding: 0% 14%;
+}
+
+/* Specific styles for various headings */
+main article:first-child h2 {
+    font-size: 1.7em;
+    color: rgb(243, 17, 17);
+}
+
+main article:last-of-type h2 {
+    margin-top: 15px;
+    font-size: 3.5em;
+    font-weight: 350;
+    text-transform: lowercase;
+}
+
+/* Styling the first letter of the last article's heading */
+main article:last-of-type h2::first-letter {
+    text-transform: uppercase;
+}
+
+/* Styling for aside headings */
+main aside:last-child h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #bd2323;
+}
+
+/* Adding a plus sign before aside headings */
+main aside:last-child h2::before {
+    content: "+";
+    font-size: 3em;
+    margin-right: 4px;
+    line-height: 0.8;
+    color: black;
+    vertical-align: sub;
+}
+
+/* Styling for unordered lists */
+main aside:last-child ul {
+    padding: 3px;
+    margin-top: 0;
+    list-style: none;
+}
+
+/* Adding a plus sign before list items */
+main aside:last-child li::before {
+    content: "+";
+    margin-right: 4px;
+}
+
+/* Styling for list item headings and paragraphs */
+main aside:last-child li h3 {
+    display: inline;
+    margin-top: 10px;
+    margin: 0;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+main aside:last-child li p {
+    margin-bottom: 10px;
+    margin-left: 17px;
+}
+
+main article:last-of-type li p {
+    padding-bottom: 50px;
+}
+
+/* Styling for specific elements within paragraphs */
+main aside:first-of-type p::first-line,
+main article:first-child p::first-line,
+main article:last-of-type p::first-line {
+    font-weight: 500;
+}
+
+/* Styling for specific paragraphs */
+main aside:first-of-type p {
+    line-height: 1.5;
+    font-size: 1.1em;
+}
+
+main article:last-of-type p mark {
+    background-color: rgba(217, 214, 214, 0.541);
+}
+
+/* Styling for footer section */
+footer {
+    margin-top: 25px;
+    font-size: 1.4em;
+    text-transform: lowercase;
+}
+
+footer em {
+    margin-right: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+footer abbr {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1076px) {
+    #container {
+        margin: 20px auto;
+    }
+}
